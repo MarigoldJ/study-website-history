@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>프론트엔드의 역사 | History of Frontend UI/UX</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/eras.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Comic+Neue:wght@400;700&family=Lobster&family=Roboto:wght@300;400;500;700&family=Montserrat:wght@300;400;600;700;900&family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ==================== LANDING / INTRO ==================== -->
+  <section id="landing" class="landing">
+    <div class="landing-bg"></div>
+    <div class="landing-content">
+      <h1 class="landing-title">
+        <span class="title-line">프론트엔드의</span>
+        <span class="title-line accent">역사</span>
+      </h1>
+      <p class="landing-subtitle">1995 — 2025, 30년간의 웹 UI/UX 변천사를 경험하세요</p>
+      <div class="landing-years">
+        <span>1995</span><span>2000</span><span>2005</span><span>2010</span><span>2015</span><span>2020</span><span>2025</span>
+      </div>
+      <button class="landing-cta" onclick="startJourney()">시간 여행 시작하기 ↓</button>
+    </div>
+  </section>
+
+  <!-- ==================== TIMELINE NAV ==================== -->
+  <nav id="timeline-nav" class="timeline-nav">
+    <div class="timeline-track">
+      <div class="timeline-progress" id="timeline-progress"></div>
+    </div>
+    <div class="timeline-dots">
+      <button class="timeline-dot active" data-era="1995" onclick="goToEra('1995')">
+        <span class="dot-year">1995</span>
+      </button>
+      <button class="timeline-dot" data-era="2000" onclick="goToEra('2000')">
+        <span class="dot-year">2000</span>
+      </button>
+      <button class="timeline-dot" data-era="2005" onclick="goToEra('2005')">
+        <span class="dot-year">2005</span>
+      </button>
+      <button class="timeline-dot" data-era="2010" onclick="goToEra('2010')">
+        <span class="dot-year">2010</span>
+      </button>
+      <button class="timeline-dot" data-era="2015" onclick="goToEra('2015')">
+        <span class="dot-year">2015</span>
+      </button>
+      <button class="timeline-dot" data-era="2020" onclick="goToEra('2020')">
+        <span class="dot-year">2020</span>
+      </button>
+      <button class="timeline-dot" data-era="2025" onclick="goToEra('2025')">
+        <span class="dot-year">2025</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ==================== ERA: 1995 ==================== -->
+  <section id="era-1995" class="era era-1995">
+    <div class="era-header">
+      <div class="era-badge">1995</div>
+      <h2 class="era-title">웹의 탄생</h2>
+      <p class="era-desc">HTML Only · 테이블 레이아웃 · 인라인 스타일 · 회색 배경</p>
+    </div>
+
+    <div class="era-1995-content">
+      <div class="old-browser-frame">
+        <div class="browser-toolbar-95">
+          <div class="toolbar-title-95">Netscape Navigator - [My Cool Homepage]</div>
+          <div class="toolbar-buttons-95">
+            <span class="btn-95">_</span>
+            <span class="btn-95">□</span>
+            <span class="btn-95">×</span>
+          </div>
+        </div>
+        <div class="browser-menubar-95">
+          <span>File</span><span>Edit</span><span>View</span><span>Go</span><span>Bookmarks</span><span>Options</span><span>Directory</span><span>Window</span><span>Help</span>
+        </div>
+        <div class="browser-address-95">
+          <span>Location:</span>
+          <div class="address-bar-95">http://www.my-cool-homepage.com/~user/index.html</div>
+        </div>
+        <div class="page-content-95">
+          <center>
+            <h1 style="font-family: 'Times New Roman', serif; color: #000080;">
+              ★ Welcome to My Cool Homepage ★
+            </h1>
+            <p class="marquee-95">
+              <span>※ 이 사이트는 공사중입니다! Under Construction! ※&nbsp;&nbsp;&nbsp;♪ 방문자 여러분 환영합니다 ♪&nbsp;&nbsp;&nbsp;</span>
+            </p>
+            <img class="construction-gif" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='40'%3E%3Crect width='80' height='40' fill='%23FFD700' rx='4'/%3E%3Ctext x='40' y='25' text-anchor='middle' font-size='11' font-family='Arial' fill='%23000'%3E🚧UNDER🚧%3C/text%3E%3C/svg%3E" alt="Under Construction">
+            <hr width="80%" size="3" noshade>
+            <table class="table-95" border="2" cellpadding="8" cellspacing="0" width="90%">
+              <tr>
+                <td bgcolor="#FFFF00" colspan="2" align="center">
+                  <font size="4" color="#FF0000"><b>📰 What's New!</b></font>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#FFFFFF" width="30%" valign="top">
+                  <font size="2" face="Times New Roman">
+                    <b>Navigation:</b><br>
+                    <a href="#">🏠 Home</a><br>
+                    <a href="#">📖 About Me</a><br>
+                    <a href="#">🔗 Cool Links</a><br>
+                    <a href="#">📧 Email Me</a><br>
+                    <a href="#">📝 Guestbook</a><br>
+                    <a href="#">🖼️ My Gallery</a><br>
+                    <br>
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='31'%3E%3Crect width='88' height='31' fill='%23000080' rx='2'/%3E%3Ctext x='44' y='20' text-anchor='middle' font-size='9' font-family='Arial' fill='%23FFF'%3ENetscape Now!%3C/text%3E%3C/svg%3E" alt="Netscape Now!"><br><br>
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='31'%3E%3Crect width='88' height='31' fill='%23008000' rx='2'/%3E%3Ctext x='44' y='20' text-anchor='middle' font-size='9' font-family='Arial' fill='%23FFF'%3EHTML 2.0%3C/text%3E%3C/svg%3E" alt="HTML 2.0">
+                  </font>
+                </td>
+                <td bgcolor="#FFFFFF" valign="top">
+                  <font size="2" face="Times New Roman">
+                    <b>Welcome to my personal homepage!</b><br><br>
+                    안녕하세요! 제 홈페이지에 오신 것을 환영합니다.<br>
+                    이 페이지는 1995년 스타일로 만들어졌습니다.<br><br>
+                    <font color="#FF0000">NEW!</font> 방명록이 추가되었습니다! (1995.12.25)<br>
+                    <font color="#FF0000">NEW!</font> 링크 페이지를 업데이트했습니다! (1995.11.30)<br><br>
+                    <center>
+                      <table border="1" cellpadding="4" bgcolor="#E0E0E0">
+                        <tr><td align="center">
+                          <font size="2">이 사이트의 방문자 수</font><br>
+                          <font size="5" face="Courier New" color="#FF0000"><b>001,337</b></font>
+                        </td></tr>
+                      </table>
+                    </center>
+                    <br>
+                    <font size="1" color="#808080">Best viewed with Netscape Navigator 2.0 at 800×600 resolution</font>
+                  </font>
+                </td>
+              </tr>
+            </table>
+            <hr width="80%" size="3" noshade>
+            <font size="1" face="Times New Roman" color="#808080">
+              Copyright © 1995 My Cool Homepage. All Rights Reserved.<br>
+              Last updated: December 25, 1995<br>
+              <a href="#">Sign my Guestbook!</a> | <a href="#">View Guestbook</a>
+            </font>
+          </center>
+        </div>
+      </div>
+
+      <div class="era-info-card era-info-95">
+        <h3>🕰️ 1995년대 웹 디자인 특징</h3>
+        <ul>
+          <li><strong>테이블 레이아웃:</strong> CSS가 없던 시절, &lt;table&gt; 태그로 페이지 구조를 잡았습니다</li>
+          <li><strong>회색 배경:</strong> 기본 브라우저 배경색 #C0C0C0이 표준이었습니다</li>
+          <li><strong>인라인 스타일:</strong> &lt;font&gt;, &lt;center&gt;, bgcolor 속성을 직접 사용했습니다</li>
+          <li><strong>&lt;marquee&gt; 태그:</strong> 흐르는 텍스트가 '멋진' 효과였습니다</li>
+          <li><strong>방문자 카운터:</strong> 모든 홈페이지의 필수 요소였습니다</li>
+          <li><strong>GIF 애니메이션:</strong> "Under Construction" 배너가 상징적이었습니다</li>
+          <li><strong>"Best viewed in...":</strong> 특정 브라우저 권장 문구가 일반적이었습니다</li>
+        </ul>
+        <div class="tech-stack-95">
+          <span>HTML 2.0</span><span>Netscape Navigator</span><span>CGI Scripts</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ERA: 2000 ==================== -->
+  <section id="era-2000" class="era era-2000">
+    <div class="era-header">
+      <div class="era-badge">2000</div>
+      <h2 class="era-title">닷컴 버블 시대</h2>
+      <p class="era-desc">Flash · 프레임 레이아웃 · 화려한 색상 · 팝업 · 카운터</p>
+    </div>
+
+    <div class="era-2000-content">
+      <div class="flash-site-frame">
+        <div class="flash-header-2000">
+          <div class="flash-logo">
+            <span class="neon-text">CYBER</span><span class="neon-text accent">SPACE</span>
+          </div>
+          <div class="flash-tagline">— ENTER THE DIGITAL REALM —</div>
+        </div>
+
+        <div class="flash-nav-2000">
+          <a href="#" class="flash-nav-btn">HOME</a>
+          <a href="#" class="flash-nav-btn">ABOUT</a>
+          <a href="#" class="flash-nav-btn">GALLERY</a>
+          <a href="#" class="flash-nav-btn">LINKS</a>
+          <a href="#" class="flash-nav-btn">CONTACT</a>
+        </div>
+
+        <div class="flash-body-2000">
+          <div class="flash-sidebar-2000">
+            <div class="sidebar-widget-2000">
+              <div class="widget-title-2000">✦ MENU ✦</div>
+              <a href="#" class="sidebar-link-2000">» News</a>
+              <a href="#" class="sidebar-link-2000">» Downloads</a>
+              <a href="#" class="sidebar-link-2000">» Forum</a>
+              <a href="#" class="sidebar-link-2000">» Chat Room</a>
+              <a href="#" class="sidebar-link-2000">» Web Ring</a>
+            </div>
+            <div class="sidebar-widget-2000">
+              <div class="widget-title-2000">✦ POLL ✦</div>
+              <div class="poll-2000">
+                <p>Best Browser?</p>
+                <label><input type="radio" name="poll"> IE 5.5</label>
+                <label><input type="radio" name="poll"> Netscape 6</label>
+                <label><input type="radio" name="poll"> Opera</label>
+                <button class="vote-btn-2000">VOTE</button>
+              </div>
+            </div>
+            <div class="visitor-counter-2000">
+              <span class="counter-label">Visitors:</span>
+              <div class="counter-digits">
+                <span class="digit">0</span><span class="digit">4</span><span class="digit">2</span><span class="digit">0</span><span class="digit">6</span><span class="digit">9</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flash-main-2000">
+            <div class="content-box-2000">
+              <h3>🌐 Welcome to CyberSpace!</h3>
+              <p>2000년대 웹 사이트에 오신 것을 환영합니다! Flash와 함께 화려한 인터넷 세상이 펼쳐졌습니다.</p>
+              <p><blink class="blink-2000">★ NEW! ★</blink> 새로운 Flash 게임이 추가되었습니다!</p>
+            </div>
+            <div class="content-box-2000">
+              <h3>💿 Latest Updates</h3>
+              <div class="news-item-2000">
+                <span class="date-2000">[2000.03.15]</span> 홈페이지 리뉴얼! Flash 인트로 추가
+              </div>
+              <div class="news-item-2000">
+                <span class="date-2000">[2000.02.28]</span> 채팅방 오픈! Java Applet 기반
+              </div>
+              <div class="news-item-2000">
+                <span class="date-2000">[2000.01.10]</span> Y2K 버그 무사 통과!
+              </div>
+            </div>
+            <div class="popup-ad-2000">
+              <div class="popup-header-2000">
+                <span>Special Offer!</span>
+                <span class="popup-close-2000">×</span>
+              </div>
+              <div class="popup-body-2000">
+                🎉 무료 이메일 계정을 만드세요!<br>
+                <small>HoTMaiL 100MB 무료!</small><br>
+                <button class="popup-btn-2000">CLICK HERE!</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flash-footer-2000">
+          <div class="scrolling-text-2000">
+            <span>★ This site is powered by Macromedia Flash 5 ★ Best viewed at 1024×768 ★ IE 5.5 or Netscape 6 recommended ★ Join our Web Ring! ★</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="era-info-card era-info-2000">
+        <h3>💿 2000년대 웹 디자인 특징</h3>
+        <ul>
+          <li><strong>Flash 인트로:</strong> "Skip Intro" 버튼이 있는 화려한 애니메이션 인트로가 필수였습니다</li>
+          <li><strong>프레임 레이아웃:</strong> &lt;frameset&gt;으로 화면을 분할하여 네비게이션과 콘텐츠를 나누었습니다</li>
+          <li><strong>네온 색상:</strong> 어두운 배경에 밝고 화려한 네온 컬러를 사용했습니다</li>
+          <li><strong>팝업 광고:</strong> 새 창으로 열리는 팝업 광고가 범람했습니다</li>
+          <li><strong>웹 링:</strong> 비슷한 주제의 사이트들이 서로 연결된 커뮤니티였습니다</li>
+          <li><strong>투표/설문:</strong> 사이드바에 간단한 투표 위젯이 인기였습니다</li>
+          <li><strong>Java Applet:</strong> 인터랙티브 요소를 위해 Java Applet이 사용되었습니다</li>
+        </ul>
+        <div class="tech-stack-2000">
+          <span>Flash 5</span><span>HTML 4.0</span><span>CSS 1</span><span>Java Applet</span><span>DHTML</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ERA: 2005 ==================== -->
+  <section id="era-2005" class="era era-2005">
+    <div class="era-header">
+      <div class="era-badge">2005</div>
+      <h2 class="era-title">Web 2.0의 시대</h2>
+      <p class="era-desc">글로시 버튼 · 그라디언트 · 둥근 모서리 · AJAX · RSS</p>
+    </div>
+
+    <div class="era-2005-content">
+      <div class="web2-site-frame">
+        <div class="web2-header">
+          <div class="web2-logo">
+            <span class="web2-logo-text">digg<span class="web2-beta">BETA</span></span>
+            <span class="web2-logo-sub">style</span>
+          </div>
+          <div class="web2-search">
+            <input type="text" placeholder="Search..." class="web2-search-input">
+            <button class="web2-search-btn">🔍</button>
+          </div>
+          <div class="web2-user-nav">
+            <a href="#" class="web2-link">Sign Up</a>
+            <a href="#" class="web2-link">Login</a>
+            <a href="#" class="rss-icon">RSS</a>
+          </div>
+        </div>
+
+        <div class="web2-nav">
+          <a href="#" class="web2-nav-item active">Popular</a>
+          <a href="#" class="web2-nav-item">Recent</a>
+          <a href="#" class="web2-nav-item">Technology</a>
+          <a href="#" class="web2-nav-item">Science</a>
+          <a href="#" class="web2-nav-item">World</a>
+          <a href="#" class="web2-nav-item">Entertainment</a>
+        </div>
+
+        <div class="web2-body">
+          <div class="web2-main">
+            <div class="web2-story">
+              <div class="web2-digg-count">
+                <span class="digg-number">1,847</span>
+                <span class="digg-label">diggs</span>
+              </div>
+              <div class="web2-story-content">
+                <h3><a href="#">AJAX가 웹을 바꾸고 있다 - 새로운 인터랙티브 웹의 시작</a></h3>
+                <p>XMLHttpRequest를 활용한 비동기 통신이 웹 페이지를 새로고침 없이 업데이트할 수 있게 되면서 웹 경험이 혁명적으로 변화하고 있습니다...</p>
+                <div class="web2-meta">
+                  <span class="web2-source">techcrunch.com</span>
+                  <span class="web2-time">3 hours ago</span>
+                  <a href="#" class="web2-comments">💬 248 comments</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="web2-story">
+              <div class="web2-digg-count">
+                <span class="digg-number">923</span>
+                <span class="digg-label">diggs</span>
+              </div>
+              <div class="web2-story-content">
+                <h3><a href="#">Google Maps가 세상을 놀라게 하다 - 드래그 가능한 지도!</a></h3>
+                <p>구글이 출시한 Google Maps는 JavaScript와 AJAX를 활용하여 웹 브라우저에서 직접 지도를 드래그하고 확대/축소할 수 있는 혁신적인 서비스입니다...</p>
+                <div class="web2-meta">
+                  <span class="web2-source">mashable.com</span>
+                  <span class="web2-time">5 hours ago</span>
+                  <a href="#" class="web2-comments">💬 156 comments</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="web2-story">
+              <div class="web2-digg-count">
+                <span class="digg-number">612</span>
+                <span class="digg-label">diggs</span>
+              </div>
+              <div class="web2-story-content">
+                <h3><a href="#">Ruby on Rails 1.0 출시 - 웹 개발의 생산성이 10배로</a></h3>
+                <p>DHH가 만든 Ruby on Rails 프레임워크가 정식 버전을 출시했습니다. "Convention over Configuration" 철학으로 웹 개발 패러다임이 바뀌고 있습니다...</p>
+                <div class="web2-meta">
+                  <span class="web2-source">readwriteweb.com</span>
+                  <span class="web2-time">8 hours ago</span>
+                  <a href="#" class="web2-comments">💬 89 comments</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="web2-sidebar">
+            <div class="web2-widget">
+              <h4 class="web2-widget-title">🏷️ Popular Tags</h4>
+              <div class="tag-cloud">
+                <a href="#" style="font-size: 18px;">Web 2.0</a>
+                <a href="#" style="font-size: 14px;">AJAX</a>
+                <a href="#" style="font-size: 22px;">Ruby on Rails</a>
+                <a href="#" style="font-size: 12px;">RSS</a>
+                <a href="#" style="font-size: 16px;">Flickr</a>
+                <a href="#" style="font-size: 20px;">YouTube</a>
+                <a href="#" style="font-size: 13px;">del.icio.us</a>
+                <a href="#" style="font-size: 15px;">Mashup</a>
+                <a href="#" style="font-size: 11px;">Folksonomy</a>
+                <a href="#" style="font-size: 17px;">Blog</a>
+                <a href="#" style="font-size: 14px;">Podcast</a>
+                <a href="#" style="font-size: 19px;">Google</a>
+              </div>
+            </div>
+            <div class="web2-widget">
+              <h4 class="web2-widget-title">⭐ Rate This Site</h4>
+              <div class="star-rating">
+                <span class="star filled">★</span>
+                <span class="star filled">★</span>
+                <span class="star filled">★</span>
+                <span class="star filled">★</span>
+                <span class="star">★</span>
+              </div>
+              <p class="rating-text">4.0 out of 5 (2,341 votes)</p>
+            </div>
+            <div class="web2-widget">
+              <h4 class="web2-widget-title">📡 Subscribe</h4>
+              <button class="web2-glossy-btn rss-btn">Subscribe via RSS</button>
+              <button class="web2-glossy-btn email-btn">Subscribe via Email</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="era-info-card era-info-2005">
+        <h3>🌟 2005년대 웹 디자인 특징</h3>
+        <ul>
+          <li><strong>글로시 버튼:</strong> 광택이 나는 반사 효과가 있는 입체적 버튼이 대세였습니다</li>
+          <li><strong>그라디언트 헤더:</strong> 부드러운 색상 전환이 적용된 헤더 디자인이 유행했습니다</li>
+          <li><strong>둥근 모서리:</strong> CSS3 이전이라 이미지로 둥근 모서리를 구현했습니다</li>
+          <li><strong>Beta 배지:</strong> "영원한 베타" - 서비스명 옆에 Beta 표시가 트렌디했습니다</li>
+          <li><strong>태그 클라우드:</strong> 인기 키워드를 크기별로 표시하는 시각적 요소였습니다</li>
+          <li><strong>RSS:</strong> 주황색 RSS 아이콘이 모든 사이트에 있었습니다</li>
+          <li><strong>AJAX:</strong> 페이지 새로고침 없는 비동기 업데이트가 혁명이었습니다</li>
+        </ul>
+        <div class="tech-stack-2005">
+          <span>AJAX</span><span>CSS 2.1</span><span>jQuery</span><span>Ruby on Rails</span><span>PHP 5</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ERA: 2010 ==================== -->
+  <section id="era-2010" class="era era-2010">
+    <div class="era-header">
+      <div class="era-badge">2010</div>
+      <h2 class="era-title">스큐어모피즘 & 모바일</h2>
+      <p class="era-desc">iOS 스타일 · 텍스처 · 리얼리스틱 아이콘 · 반응형 · jQuery</p>
+    </div>
+
+    <div class="era-2010-content">
+      <div class="skeu-app-frame">
+        <div class="iphone-frame">
+          <div class="iphone-notch"></div>
+          <div class="iphone-screen">
+            <div class="ios-statusbar">
+              <span>9:41 AM</span>
+              <span>📶 100%🔋</span>
+            </div>
+            <div class="ios-header">
+              <button class="ios-back-btn">◀ Back</button>
+              <h3>Notes</h3>
+              <button class="ios-edit-btn">Edit</button>
+            </div>
+            <div class="ios-content">
+              <div class="note-paper">
+                <div class="note-date">2010년 6월 7일 화요일</div>
+                <div class="note-lines">
+                  <p>스큐어모피즘 시대가 왔습니다!</p>
+                  <p>실제 사물을 모방한 UI가 대세입니다. 가죽 질감, 나무 선반, 종이 텍스처...</p>
+                  <p>iPhone이 모바일 웹을 완전히 바꾸어놓았습니다.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skeu-desktop-frame">
+          <div class="skeu-header">
+            <div class="skeu-logo">
+              <span class="skeu-icon">📱</span>
+              <span class="skeu-brand">AppStore<span class="skeu-version">2.0</span></span>
+            </div>
+            <div class="skeu-nav-tabs">
+              <button class="skeu-tab active">Featured</button>
+              <button class="skeu-tab">Categories</button>
+              <button class="skeu-tab">Top Charts</button>
+              <button class="skeu-tab">Updates</button>
+            </div>
+          </div>
+
+          <div class="skeu-hero">
+            <div class="skeu-hero-inner">
+              <h2>반응형 웹 디자인의 시작</h2>
+              <p>Ethan Marcotte가 "Responsive Web Design"을 제안하며 모바일과 데스크톱을 하나의 코드로 대응하는 새로운 패러다임이 시작되었습니다.</p>
+              <button class="skeu-cta-btn">Learn More</button>
+            </div>
+          </div>
+
+          <div class="skeu-grid">
+            <div class="skeu-card">
+              <div class="skeu-card-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">📅</div>
+              <h4>Calendar</h4>
+              <div class="skeu-stars">★★★★★</div>
+              <button class="skeu-install-btn">FREE</button>
+            </div>
+            <div class="skeu-card">
+              <div class="skeu-card-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">🎵</div>
+              <h4>Music Player</h4>
+              <div class="skeu-stars">★★★★☆</div>
+              <button class="skeu-install-btn">$0.99</button>
+            </div>
+            <div class="skeu-card">
+              <div class="skeu-card-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">🌤️</div>
+              <h4>Weather</h4>
+              <div class="skeu-stars">★★★★★</div>
+              <button class="skeu-install-btn">FREE</button>
+            </div>
+            <div class="skeu-card">
+              <div class="skeu-card-icon" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">📝</div>
+              <h4>Notes</h4>
+              <div class="skeu-stars">★★★★☆</div>
+              <button class="skeu-install-btn">FREE</button>
+            </div>
+          </div>
+
+          <div class="skeu-toggle-section">
+            <h4>설정 예시</h4>
+            <div class="skeu-setting-row">
+              <span>Wi-Fi</span>
+              <label class="skeu-toggle">
+                <input type="checkbox" checked>
+                <span class="skeu-toggle-slider"></span>
+              </label>
+            </div>
+            <div class="skeu-setting-row">
+              <span>알림</span>
+              <label class="skeu-toggle">
+                <input type="checkbox" checked>
+                <span class="skeu-toggle-slider"></span>
+              </label>
+            </div>
+            <div class="skeu-setting-row">
+              <span>다크 모드</span>
+              <label class="skeu-toggle">
+                <input type="checkbox">
+                <span class="skeu-toggle-slider"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="era-info-card era-info-2010">
+        <h3>📱 2010년대 웹 디자인 특징</h3>
+        <ul>
+          <li><strong>스큐어모피즘:</strong> 실제 사물의 질감과 형태를 UI에 그대로 재현했습니다</li>
+          <li><strong>텍스처:</strong> 가죽, 나무, 린넨, 종이 등의 질감이 배경으로 사용되었습니다</li>
+          <li><strong>반응형 디자인:</strong> Ethan Marcotte의 기사로 반응형 웹이 시작되었습니다</li>
+          <li><strong>jQuery 플러그인:</strong> 슬라이더, 아코디언, 라이트박스 등 jQuery 플러그인이 범람했습니다</li>
+          <li><strong>iOS 영향:</strong> Apple의 iOS 디자인이 웹 디자인에 큰 영향을 미쳤습니다</li>
+          <li><strong>Bootstrap 등장:</strong> Twitter Bootstrap이 출시되며 프론트엔드 프레임워크 시대가 열렸습니다</li>
+          <li><strong>토글 스위치:</strong> 실제 스위치처럼 생긴 토글 UI가 유행했습니다</li>
+        </ul>
+        <div class="tech-stack-2010">
+          <span>jQuery</span><span>Bootstrap</span><span>CSS3</span><span>HTML5</span><span>Backbone.js</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ERA: 2015 ==================== -->
+  <section id="era-2015" class="era era-2015">
+    <div class="era-header">
+      <div class="era-badge">2015</div>
+      <h2 class="era-title">플랫 디자인 & 머티리얼</h2>
+      <p class="era-desc">플랫 컬러 · 카드 레이아웃 · 머티리얼 디자인 · 히어로 이미지 · 패럴랙스</p>
+    </div>
+
+    <div class="era-2015-content">
+      <div class="material-site-frame">
+        <div class="mat-toolbar">
+          <button class="mat-hamburger">
+            <span></span><span></span><span></span>
+          </button>
+          <span class="mat-toolbar-title">Material Blog</span>
+          <div class="mat-toolbar-actions">
+            <button class="mat-icon-btn">🔍</button>
+            <button class="mat-icon-btn">🔔</button>
+            <button class="mat-icon-btn">👤</button>
+          </div>
+        </div>
+
+        <div class="mat-hero">
+          <div class="mat-hero-content">
+            <h2>플랫 디자인의 혁명</h2>
+            <p>그림자와 텍스처를 버리고, 순수한 색상과 타이포그래피로 승부하다</p>
+            <button class="mat-hero-btn">READ MORE</button>
+            <button class="mat-hero-btn outline">WATCH VIDEO</button>
+          </div>
+        </div>
+
+        <div class="mat-card-grid">
+          <div class="mat-card">
+            <div class="mat-card-media" style="background: #E91E63;"></div>
+            <div class="mat-card-body">
+              <h3>Google Material Design</h3>
+              <p>Google이 발표한 Material Design은 종이와 잉크에서 영감을 받은 시각적 언어입니다. 그림자로 깊이를 표현하고, 의미 있는 모션을 사용합니다.</p>
+            </div>
+            <div class="mat-card-actions">
+              <button class="mat-flat-btn">SHARE</button>
+              <button class="mat-flat-btn">LEARN MORE</button>
+            </div>
+          </div>
+
+          <div class="mat-card">
+            <div class="mat-card-media" style="background: #2196F3;"></div>
+            <div class="mat-card-body">
+              <h3>카드 기반 디자인</h3>
+              <p>Pinterest에서 시작된 카드 UI 패턴이 모든 웹사이트의 표준이 되었습니다. 콘텐츠를 카드 단위로 그룹화하여 스캔하기 쉽게 만듭니다.</p>
+            </div>
+            <div class="mat-card-actions">
+              <button class="mat-flat-btn">SHARE</button>
+              <button class="mat-flat-btn">LEARN MORE</button>
+            </div>
+          </div>
+
+          <div class="mat-card">
+            <div class="mat-card-media" style="background: #4CAF50;"></div>
+            <div class="mat-card-body">
+              <h3>SPA & React 시대</h3>
+              <p>React, Angular, Vue.js 등 SPA 프레임워크가 웹 개발을 지배하기 시작했습니다. 컴포넌트 기반 아키텍처가 새로운 표준이 됩니다.</p>
+            </div>
+            <div class="mat-card-actions">
+              <button class="mat-flat-btn">SHARE</button>
+              <button class="mat-flat-btn">LEARN MORE</button>
+            </div>
+          </div>
+
+          <div class="mat-card">
+            <div class="mat-card-media" style="background: #FF9800;"></div>
+            <div class="mat-card-body">
+              <h3>모바일 퍼스트</h3>
+              <p>모바일 트래픽이 데스크톱을 추월하면서, 모바일을 먼저 디자인하고 데스크톱으로 확장하는 접근법이 표준이 되었습니다.</p>
+            </div>
+            <div class="mat-card-actions">
+              <button class="mat-flat-btn">SHARE</button>
+              <button class="mat-flat-btn">LEARN MORE</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="mat-fab" title="새 글 작성">✏️</div>
+
+        <div class="mat-bottom-nav">
+          <button class="mat-bottom-item active">
+            <span class="mat-bottom-icon">🏠</span>
+            <span class="mat-bottom-label">Home</span>
+          </button>
+          <button class="mat-bottom-item">
+            <span class="mat-bottom-icon">🔥</span>
+            <span class="mat-bottom-label">Trending</span>
+          </button>
+          <button class="mat-bottom-item">
+            <span class="mat-bottom-icon">📚</span>
+            <span class="mat-bottom-label">Library</span>
+          </button>
+          <button class="mat-bottom-item">
+            <span class="mat-bottom-icon">👤</span>
+            <span class="mat-bottom-label">Profile</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="era-info-card era-info-2015">
+        <h3>🎨 2015년대 웹 디자인 특징</h3>
+        <ul>
+          <li><strong>플랫 디자인:</strong> Microsoft의 Metro UI와 Apple의 iOS 7이 이끈 플랫 디자인 혁명</li>
+          <li><strong>머티리얼 디자인:</strong> Google의 Material Design이 안드로이드와 웹의 표준이 되었습니다</li>
+          <li><strong>카드 UI:</strong> Pinterest 스타일의 카드 레이아웃이 보편화되었습니다</li>
+          <li><strong>햄버거 메뉴:</strong> ☰ 아이콘이 모바일 네비게이션의 상징이 되었습니다</li>
+          <li><strong>히어로 이미지:</strong> 전체 화면 크기의 대형 이미지/비디오 배너가 유행했습니다</li>
+          <li><strong>FAB 버튼:</strong> Floating Action Button이 핵심 액션을 나타냈습니다</li>
+          <li><strong>고스트 버튼:</strong> 배경 없이 테두리만 있는 투명한 버튼이 트렌드였습니다</li>
+        </ul>
+        <div class="tech-stack-2015">
+          <span>React</span><span>Angular</span><span>Flexbox</span><span>Sass/Less</span><span>Webpack</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ERA: 2020 ==================== -->
+  <section id="era-2020" class="era era-2020">
+    <div class="era-header">
+      <div class="era-badge">2020</div>
+      <h2 class="era-title">모던 웹의 성숙</h2>
+      <p class="era-desc">다크 모드 · 글래스모피즘 · 뉴모피즘 · CSS Grid · 마이크로 인터랙션</p>
+    </div>
+
+    <div class="era-2020-content">
+      <div class="modern-site-frame">
+        <div class="modern-header">
+          <div class="modern-logo">
+            <span class="logo-gradient">Flux</span>
+          </div>
+          <nav class="modern-nav">
+            <a href="#" class="modern-nav-link active">Dashboard</a>
+            <a href="#" class="modern-nav-link">Analytics</a>
+            <a href="#" class="modern-nav-link">Projects</a>
+            <a href="#" class="modern-nav-link">Settings</a>
+          </nav>
+          <div class="modern-header-actions">
+            <button class="theme-toggle" onclick="this.classList.toggle('toggled')">
+              <span class="toggle-sun">☀️</span>
+              <span class="toggle-moon">🌙</span>
+            </button>
+            <div class="modern-avatar">JD</div>
+          </div>
+        </div>
+
+        <div class="modern-dashboard">
+          <div class="glass-card stat-card">
+            <div class="stat-icon" style="background: linear-gradient(135deg, #667eea, #764ba2);">📈</div>
+            <div class="stat-info">
+              <span class="stat-label">총 방문자</span>
+              <span class="stat-value">24,521</span>
+              <span class="stat-change positive">+12.5%</span>
+            </div>
+          </div>
+          <div class="glass-card stat-card">
+            <div class="stat-icon" style="background: linear-gradient(135deg, #f093fb, #f5576c);">💰</div>
+            <div class="stat-info">
+              <span class="stat-label">매출</span>
+              <span class="stat-value">₩8.2M</span>
+              <span class="stat-change positive">+8.3%</span>
+            </div>
+          </div>
+          <div class="glass-card stat-card">
+            <div class="stat-icon" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">👥</div>
+            <div class="stat-info">
+              <span class="stat-label">신규 가입</span>
+              <span class="stat-value">1,429</span>
+              <span class="stat-change negative">-2.1%</span>
+            </div>
+          </div>
+          <div class="glass-card stat-card">
+            <div class="stat-icon" style="background: linear-gradient(135deg, #43e97b, #38f9d7);">⚡</div>
+            <div class="stat-info">
+              <span class="stat-label">성능 점수</span>
+              <span class="stat-value">98</span>
+              <span class="stat-change positive">+5.0%</span>
+            </div>
+          </div>
+
+          <div class="glass-card chart-card">
+            <h3>주간 트래픽</h3>
+            <div class="mini-chart">
+              <div class="chart-bar" style="--height: 40%;"><span>Mon</span></div>
+              <div class="chart-bar" style="--height: 65%;"><span>Tue</span></div>
+              <div class="chart-bar" style="--height: 55%;"><span>Wed</span></div>
+              <div class="chart-bar" style="--height: 80%;"><span>Thu</span></div>
+              <div class="chart-bar" style="--height: 90%;"><span>Fri</span></div>
+              <div class="chart-bar" style="--height: 70%;"><span>Sat</span></div>
+              <div class="chart-bar" style="--height: 45%;"><span>Sun</span></div>
+            </div>
+          </div>
+
+          <div class="glass-card neu-card">
+            <h3>뉴모피즘 UI</h3>
+            <div class="neu-demo">
+              <button class="neu-btn">Button</button>
+              <div class="neu-input-wrap">
+                <input type="text" class="neu-input" placeholder="뉴모피즘 입력">
+              </div>
+              <div class="neu-progress">
+                <div class="neu-progress-fill" style="width: 72%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-card activity-card">
+            <h3>최근 활동</h3>
+            <div class="activity-list">
+              <div class="activity-item">
+                <div class="activity-dot" style="background: #667eea;"></div>
+                <div class="activity-content">
+                  <strong>새 프로젝트 생성됨</strong>
+                  <span>2분 전</span>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-dot" style="background: #f5576c;"></div>
+                <div class="activity-content">
+                  <strong>배포 완료</strong>
+                  <span>15분 전</span>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-dot" style="background: #43e97b;"></div>
+                <div class="activity-content">
+                  <strong>테스트 통과</strong>
+                  <span>1시간 전</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="era-info-card era-info-2020">
+        <h3>🌓 2020년대 웹 디자인 특징</h3>
+        <ul>
+          <li><strong>다크 모드:</strong> 시스템 연동 다크 모드가 필수 기능이 되었습니다</li>
+          <li><strong>글래스모피즘:</strong> 반투명 유리 효과(backdrop-filter)가 트렌드로 떠올랐습니다</li>
+          <li><strong>뉴모피즘:</strong> 부드러운 음영의 소프트 UI가 잠시 유행했습니다</li>
+          <li><strong>CSS Grid:</strong> 2차원 레이아웃 시스템으로 복잡한 대시보드 구현이 쉬워졌습니다</li>
+          <li><strong>그라디언트 부활:</strong> 선명하고 활기찬 그라디언트가 돌아왔습니다</li>
+          <li><strong>마이크로 인터랙션:</strong> 세밀한 hover, transition 효과가 UX를 풍부하게 만들었습니다</li>
+          <li><strong>디자인 시스템:</strong> 체계적인 디자인 토큰과 컴포넌트 라이브러리가 표준이 되었습니다</li>
+        </ul>
+        <div class="tech-stack-2020">
+          <span>React/Vue/Svelte</span><span>TypeScript</span><span>Tailwind CSS</span><span>Next.js</span><span>Figma</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ERA: 2025 ==================== -->
+  <section id="era-2025" class="era era-2025">
+    <div class="era-header">
+      <div class="era-badge">2025</div>
+      <h2 class="era-title">AI & 차세대 웹</h2>
+      <p class="era-desc">AI 인터페이스 · 벤토 그리드 · 3D · 스크롤 애니메이션 · 대형 타이포</p>
+    </div>
+
+    <div class="era-2025-content">
+      <div class="ai-site-frame">
+        <div class="ai-header">
+          <div class="ai-logo">
+            <div class="ai-logo-orb"></div>
+            <span>Nexus<sup>AI</sup></span>
+          </div>
+          <nav class="ai-nav">
+            <a href="#" class="ai-nav-pill active">Overview</a>
+            <a href="#" class="ai-nav-pill">Workspace</a>
+            <a href="#" class="ai-nav-pill">AI Chat</a>
+            <a href="#" class="ai-nav-pill">Analytics</a>
+          </nav>
+          <div class="ai-header-right">
+            <div class="ai-search-cmd">
+              <span>⌘K</span> Search anything...
+            </div>
+            <div class="ai-avatar-ring">
+              <div class="ai-avatar">U</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bento-grid">
+          <div class="bento-item bento-hero">
+            <div class="bento-mesh-bg"></div>
+            <div class="bento-hero-content">
+              <div class="ai-badge">✨ AI Powered</div>
+              <h2 class="bento-hero-title">미래를 만드는<br>인터페이스</h2>
+              <p>AI가 디자인하고, 사용자가 완성하는 새로운 웹 경험</p>
+              <div class="bento-hero-actions">
+                <button class="ai-primary-btn">시작하기 →</button>
+                <button class="ai-ghost-btn">데모 보기</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="bento-item bento-chat">
+            <h4>AI 어시스턴트</h4>
+            <div class="ai-chat-window">
+              <div class="ai-message bot">
+                <div class="ai-msg-avatar">🤖</div>
+                <div class="ai-msg-bubble">안녕하세요! 무엇을 도와드릴까요?</div>
+              </div>
+              <div class="ai-message user">
+                <div class="ai-msg-bubble">대시보드 레이아웃을 추천해줘</div>
+              </div>
+              <div class="ai-message bot">
+                <div class="ai-msg-avatar">🤖</div>
+                <div class="ai-msg-bubble">벤토 그리드 레이아웃을 추천합니다. 정보 밀도가 높으면서도 시각적으로 깔끔합니다.</div>
+              </div>
+            </div>
+            <div class="ai-chat-input">
+              <input type="text" placeholder="AI에게 물어보세요...">
+              <button class="ai-send-btn">↑</button>
+            </div>
+          </div>
+
+          <div class="bento-item bento-stats">
+            <div class="bento-stat">
+              <span class="bento-stat-number">99.9%</span>
+              <span class="bento-stat-label">Uptime</span>
+            </div>
+            <div class="bento-stat-ring">
+              <svg viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="8"/>
+                <circle cx="50" cy="50" r="40" fill="none" stroke="url(#gradient)" stroke-width="8" stroke-dasharray="230 251" stroke-linecap="round" transform="rotate(-90 50 50)"/>
+                <defs>
+                  <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#667eea"/>
+                    <stop offset="100%" style="stop-color:#764ba2"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+          </div>
+
+          <div class="bento-item bento-3d">
+            <div class="floating-cube">
+              <div class="cube">
+                <div class="cube-face front">F</div>
+                <div class="cube-face back">B</div>
+                <div class="cube-face right">R</div>
+                <div class="cube-face left">L</div>
+                <div class="cube-face top">T</div>
+                <div class="cube-face bottom">Bo</div>
+              </div>
+            </div>
+            <span class="bento-3d-label">3D CSS</span>
+          </div>
+
+          <div class="bento-item bento-scroll-demo">
+            <h4>Scroll Animation</h4>
+            <div class="scroll-animation-demo">
+              <div class="scroll-circle c1"></div>
+              <div class="scroll-circle c2"></div>
+              <div class="scroll-circle c3"></div>
+            </div>
+            <p class="scroll-label">View Transitions API</p>
+          </div>
+
+          <div class="bento-item bento-typo">
+            <div class="variable-font-demo">
+              <span class="vf-thin">Thin</span>
+              <span class="vf-regular">Regular</span>
+              <span class="vf-bold">Bold</span>
+              <span class="vf-black">Black</span>
+            </div>
+            <p class="typo-label">Variable Fonts</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="era-info-card era-info-2025">
+        <h3>🚀 2025년대 웹 디자인 특징</h3>
+        <ul>
+          <li><strong>AI 인터페이스:</strong> 대화형 AI 챗이 웹사이트의 핵심 인터랙션이 되고 있습니다</li>
+          <li><strong>벤토 그리드:</strong> Apple에서 유행시킨 불규칙한 격자 레이아웃이 대세입니다</li>
+          <li><strong>3D 요소:</strong> CSS 3D Transform과 Three.js로 웹에서 3D가 일상화되었습니다</li>
+          <li><strong>스크롤 애니메이션:</strong> Scroll-driven Animation API로 스크롤 연동 효과가 쉬워졌습니다</li>
+          <li><strong>대형 타이포그래피:</strong> 화면을 꽉 채우는 굵고 큰 텍스트가 트렌드입니다</li>
+          <li><strong>메쉬 그라디언트:</strong> 유기적인 그라디언트 배경이 부드러운 분위기를 만듭니다</li>
+          <li><strong>⌘K 검색:</strong> 커맨드 팔레트 스타일 검색이 모든 앱에 도입되고 있습니다</li>
+        </ul>
+        <div class="tech-stack-2025">
+          <span>Next.js/Nuxt</span><span>AI SDK</span><span>View Transitions</span><span>Container Queries</span><span>Rust/WASM</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <h3>프론트엔드의 역사 | 1995 — 2025</h3>
+      <p>30년간의 웹 UI/UX 변천사를 한 페이지에서 경험하세요</p>
+      <div class="footer-eras">
+        <button onclick="goToEra('1995')">1995</button>
+        <button onclick="goToEra('2000')">2000</button>
+        <button onclick="goToEra('2005')">2005</button>
+        <button onclick="goToEra('2010')">2010</button>
+        <button onclick="goToEra('2015')">2015</button>
+        <button onclick="goToEra('2020')">2020</button>
+        <button onclick="goToEra('2025')">2025</button>
+      </div>
+      <p class="footer-credit">Made with ❤️ to celebrate the web's evolution</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

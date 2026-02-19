@@ -1,0 +1,480 @@
+/* ===================================
+   MAIN STYLES - Layout, Timeline, Landing
+   =================================== */
+
+:root {
+  --color-bg: #0a0a0f;
+  --color-text: #ffffff;
+  --color-accent: #667eea;
+  --color-accent-2: #764ba2;
+  --font-main: 'Inter', 'Noto Sans KR', sans-serif;
+  --font-display: 'Montserrat', 'Noto Sans KR', sans-serif;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-main);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ===================================
+   LANDING SECTION
+   =================================== */
+
+.landing {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.landing-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(102, 126, 234, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 50%, rgba(118, 75, 162, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 100%, rgba(102, 126, 234, 0.1) 0%, transparent 40%);
+  animation: bgPulse 8s ease-in-out infinite alternate;
+}
+
+@keyframes bgPulse {
+  0% { opacity: 0.8; }
+  100% { opacity: 1.2; }
+}
+
+.landing-content {
+  text-align: center;
+  z-index: 1;
+  padding: 2rem;
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.landing-title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 8vw, 7rem);
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.title-line {
+  display: block;
+  letter-spacing: -0.02em;
+}
+
+.title-line.accent {
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-2), #f093fb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.landing-subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 3rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+}
+
+.landing-years {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.landing-years span {
+  font-family: 'Montserrat', monospace;
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.landing-years span:hover {
+  color: var(--color-accent);
+  transform: translateY(-4px);
+}
+
+.landing-cta {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: var(--font-main);
+  color: white;
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-2));
+  border: none;
+  border-radius: 60px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.02em;
+}
+
+.landing-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 40px rgba(102, 126, 234, 0.4);
+}
+
+/* ===================================
+   TIMELINE NAVIGATION
+   =================================== */
+
+.timeline-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 0.8rem 2rem;
+  background: rgba(10, 10, 15, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  transform: translateY(-100%);
+  transition: transform 0.4s ease;
+}
+
+.timeline-nav.visible {
+  transform: translateY(0);
+}
+
+.timeline-track {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.timeline-progress {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-2));
+  transition: width 0.3s ease;
+}
+
+.timeline-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline-dots::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-50%);
+}
+
+.timeline-dot {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+.timeline-dot::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  margin-bottom: 0.3rem;
+}
+
+.timeline-dot.active::before,
+.timeline-dot.passed::before {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  box-shadow: 0 0 12px rgba(102, 126, 234, 0.5);
+}
+
+.dot-year {
+  font-family: 'Montserrat', monospace;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.4);
+  transition: color 0.3s ease;
+}
+
+.timeline-dot.active .dot-year,
+.timeline-dot.passed .dot-year {
+  color: var(--color-accent);
+}
+
+.timeline-dot:hover::before {
+  transform: scale(1.3);
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.timeline-dot:hover .dot-year {
+  color: white;
+}
+
+/* ===================================
+   ERA SECTIONS - COMMON
+   =================================== */
+
+.era {
+  min-height: 100vh;
+  padding: 6rem 2rem 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.era-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.era-header.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.era-badge {
+  display: inline-block;
+  font-family: 'Montserrat', monospace;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.4rem 1.5rem;
+  border-radius: 50px;
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-2));
+  margin-bottom: 1rem;
+  letter-spacing: 0.1em;
+}
+
+.era-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.era-desc {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 300;
+}
+
+/* Era info cards */
+.era-info-card {
+  max-width: 800px;
+  margin: 3rem auto 0;
+  padding: 2rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.era-info-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.era-info-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.era-info-card li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.7;
+}
+
+.era-info-card li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+}
+
+.era-info-card li strong {
+  color: white;
+}
+
+.era-info-card [class^="tech-stack"] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.era-info-card [class^="tech-stack"] span {
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  background: rgba(102, 126, 234, 0.15);
+  color: var(--color-accent);
+  border: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+/* ===================================
+   FOOTER
+   =================================== */
+
+.site-footer {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.footer-content h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-content p {
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 1.5rem;
+}
+
+.footer-eras {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.footer-eras button {
+  padding: 0.4rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: 'Montserrat', monospace;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.footer-eras button:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  background: rgba(102, 126, 234, 0.1);
+}
+
+.footer-credit {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* ===================================
+   SCROLL ANIMATIONS
+   =================================== */
+
+.era-1995-content,
+.era-2000-content,
+.era-2005-content,
+.era-2010-content,
+.era-2015-content,
+.era-2020-content,
+.era-2025-content {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+
+.era-1995-content.visible,
+.era-2000-content.visible,
+.era-2005-content.visible,
+.era-2010-content.visible,
+.era-2015-content.visible,
+.era-2020-content.visible,
+.era-2025-content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===================================
+   RESPONSIVE
+   =================================== */
+
+@media (max-width: 768px) {
+  .era {
+    padding: 5rem 1rem 3rem;
+  }
+
+  .timeline-dots {
+    gap: 0;
+  }
+
+  .dot-year {
+    font-size: 0.6rem;
+  }
+
+  .timeline-dot::before {
+    width: 8px;
+    height: 8px;
+  }
+
+  .era-info-card {
+    padding: 1.5rem;
+  }
+}
